@@ -1,1 +1,11 @@
-site_name: My Docs
+site_name: IOTx开发指南
+nav:
+  - 物联平台开发指南:
+      - 项目简介: plat/plat-summary.md
+      - 架构图示: plat/plat-framework.md
+      - 用户管理: plat/plat-user.md 
+      - 设备管理: plat/plat-device.md
+      - 实时数据: plat/plat-realtime.md  
+  - 关于: 
+      - 更新日志: about/log.md
+theme: readthedocs
