@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>接口开发 - IOTx开发指南</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u63a5\u53e3\u5f00\u53d1";
+    var mkdocs_page_input_path = "plat/plat-develop.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> IOTx开发指南</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">物联平台开发指南</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../plat-summary/">项目简介</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../plat-framework/">架构图示</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">接口开发</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#_1">用户登录</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_2">用户注销</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_3">添加组织单位</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_4">删除组织单位</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_5">更新组织单位</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_6">查询单个组织单位</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_7">查询所有组织单位</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_8">添加用户</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_9">删除用户</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_10">更新用户</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_11">查询所有用户</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_12">查询单个用户</a></li>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">关于</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../about/log/">更新日志</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">IOTx开发指南</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>物联平台开发指南 &raquo;</li>
+        
+      
+    
+    <li>接口开发</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="_1">用户登录</h2>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/auth/login</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>POST</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>无</td>
+<td></td>
+</tr>
+<tr>
+<td>请求</td>
+<td>JSON</td>
+<td>包含是登录用户名和密码，参看下图</td>
+</tr>
+<tr>
+<td>响应</td>
+<td>JSON</td>
+<td>包含是登录用户名和密码，参看下图</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/userlogin.bmp" /></p>
+</li>
+</ul>
+<h2 id="_2">用户注销</h2>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/auth/logout</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>POST</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Bearer Token</td>
+<td>用户登录返回token</td>
+</tr>
+<tr>
+<td>请求</td>
+<td>无</td>
+<td></td>
+</tr>
+<tr>
+<td>响应</td>
+<td>无</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/userlogout.bmp" /></p>
+</li>
+</ul>
+<h2 id="_3">添加组织单位</h2>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/organizations/add</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>POST</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Bearer Token</td>
+<td>用户登录返回token</td>
+</tr>
+<tr>
+<td>请求</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+<tr>
+<td>响应</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/addorg.bmp" /></p>
+</li>
+</ul>
+<h2 id="_4">删除组织单位</h2>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/organizations/{orgId}/delete</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>POST</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Bearer Token</td>
+<td>用户登录返回token</td>
+</tr>
+<tr>
+<td>请求</td>
+<td>无</td>
+<td></td>
+</tr>
+<tr>
+<td>响应</td>
+<td>true</td>
+<td>参看下图</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/deleteorg.bmp" /></p>
+</li>
+</ul>
+<h2 id="_5">更新组织单位</h2>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/organizations/{orgId}/update</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>POST</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Bearer Token</td>
+<td>用户登录返回token</td>
+</tr>
+<tr>
+<td>请求</td>
+<td>无</td>
+<td></td>
+</tr>
+<tr>
+<td>响应</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/updateorg.bmp" /></p>
+</li>
+</ul>
+<h2 id="_6">查询单个组织单位</h2>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/organizations/{orgId}</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>GET</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Bearer Token</td>
+<td>用户登录返回token</td>
+</tr>
+<tr>
+<td>请求</td>
+<td>无</td>
+<td></td>
+</tr>
+<tr>
+<td>响应</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/get-one-org.bmp" /></p>
+</li>
+</ul>
+<h2 id="_7">查询所有组织单位</h2>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/organizations?page=0&amp;pageSize=20</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>GET</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Bearer Token</td>
+<td>用户登录返回token</td>
+</tr>
+<tr>
+<td>请求</td>
+<td>分页数据</td>
+<td>参看下图</td>
+</tr>
+<tr>
+<td>响应</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/get-all-org.bmp" /></p>
+</li>
+</ul>
+<h2 id="_8">添加用户</h2>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/organizations/{orgId}/users/add</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>POST</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Bearer Token</td>
+<td>用户登录返回token</td>
+</tr>
+<tr>
+<td>请求</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+<tr>
+<td>响应</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/adduser.png" /></p>
+</li>
+</ul>
+<h2 id="_9">删除用户</h2>
+<pre><code>禁止用户，物理不删除
+</code></pre>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/organizations/{orgId}/users/{userId}/delete</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>POST</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Bearer Token</td>
+<td>用户登录返回token</td>
+</tr>
+<tr>
+<td>请求</td>
+<td>无</td>
+<td>参看下图</td>
+</tr>
+<tr>
+<td>响应</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/delete-user.png" /></p>
+</li>
+</ul>
+<h2 id="_10">更新用户</h2>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/organizations/{orgId}/users/{userId}/update</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>POST</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Bearer Token</td>
+<td>用户登录返回token</td>
+</tr>
+<tr>
+<td>请求</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+<tr>
+<td>响应</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/update-user.png" /></p>
+</li>
+</ul>
+<h2 id="_11">查询所有用户</h2>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/organizations/{orgId}/users?page=0&amp;pageSize=20</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>GET</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Bearer Token</td>
+<td>用户登录返回token</td>
+</tr>
+<tr>
+<td>请求</td>
+<td>分页数据</td>
+<td>参看下图</td>
+</tr>
+<tr>
+<td>响应</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/get-all-users.png" /></p>
+</li>
+</ul>
+<h2 id="_12">查询单个用户</h2>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/organizations/{orgId}/users/{userId}</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>GET</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Bearer Token</td>
+<td>用户登录返回token</td>
+</tr>
+<tr>
+<td>请求</td>
+<td>无</td>
+<td>参看下图</td>
+</tr>
+<tr>
+<td>响应</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/get-one-users.png" /></p>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../about/log/" class="btn btn-neutral float-right" title="更新日志">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../plat-framework/" class="btn btn-neutral" title="架构图示"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../plat-framework/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../about/log/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
