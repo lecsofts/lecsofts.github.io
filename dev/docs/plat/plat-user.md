@@ -79,8 +79,8 @@
     | 项目   | 内容                              | 描述              |
     |--------|-----------------------------------|-------------------|
     | 服务器 | iot.lecsofts.com:8000             |                   |
-    | 接口   | /api/organizations/{orgId}/update |                   |
-    | 方法   | POST                              |                   |
+    | 接口   | /api/organizations/{orgId} |                   |
+    | 方法   | PUT                              |                   |
     | Token  | Bearer Token                      | 用户登录返回token |
     | 请求   | 无                                |                   |
     | 响应   | JSON                              | 参看下图          |
@@ -170,8 +170,8 @@
     | 项目   | 内容                                             | 描述              |
     |--------|--------------------------------------------------|-------------------|
     | 服务器 | iot.lecsofts.com:8000                            |                   |
-    | 接口   | /api/organizations/{orgId}/users/{userId}/update |                   |
-    | 方法   | POST                                             |                   |
+    | 接口   | /api/organizations/{orgId}/users/{userId} |                   |
+    | 方法   | PUT                                             |                   |
     | Token  | Bearer Token                                     | 用户登录返回token |
     | 请求   | JSON                                             | 参看下图          |
     | 响应   | JSON                                             | 参看下图          |
