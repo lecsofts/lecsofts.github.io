@@ -69,7 +69,19 @@
     <a class="current" href="./">设备管理</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#_1">正在开发</a></li>
+    <li class="toctree-l3"><a href="#_1">添加设备</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_2">删除设备</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_3">更新设备</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_4">查询单个设备</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_5">查询所有设备</a></li>
     
 
     </ul>
@@ -128,7 +140,261 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="_1">正在开发</h2>
+                <h2 id="_1">添加设备</h2>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/organizations/{orgId}/devices/add</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>POST</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Bearer Token</td>
+<td>用户登录返回token</td>
+</tr>
+<tr>
+<td>请求</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+<tr>
+<td>响应</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/add-device.png" /></p>
+</li>
+</ul>
+<h2 id="_2">删除设备</h2>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/organizations/{orgId}/devices/{deviceId}/delete</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>POST</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Bearer Token</td>
+<td>用户登录返回token</td>
+</tr>
+<tr>
+<td>请求</td>
+<td>无</td>
+<td></td>
+</tr>
+<tr>
+<td>响应</td>
+<td>true</td>
+<td>参看下图</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/delete-device.png" /></p>
+</li>
+</ul>
+<h2 id="_3">更新设备</h2>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/organizations/{orgId}/devices/{deviceId}</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>PUT</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Bearer Token</td>
+<td>用户登录返回token</td>
+</tr>
+<tr>
+<td>请求</td>
+<td>无</td>
+<td></td>
+</tr>
+<tr>
+<td>响应</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/update-device.png" /></p>
+</li>
+</ul>
+<h2 id="_4">查询单个设备</h2>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/organizations/{orgId}/devices/{deviceId}</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>GET</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Bearer Token</td>
+<td>用户登录返回token</td>
+</tr>
+<tr>
+<td>请求</td>
+<td>无</td>
+<td></td>
+</tr>
+<tr>
+<td>响应</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/get-one-device.png" /></p>
+</li>
+</ul>
+<h2 id="_5">查询所有设备</h2>
+<ul>
+<li>
+<p><strong>参数列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器</td>
+<td>iot.lecsofts.com:8000</td>
+<td></td>
+</tr>
+<tr>
+<td>接口</td>
+<td>/api/organizations/{orgId}/devices?page=0&amp;pageSize=20</td>
+<td></td>
+</tr>
+<tr>
+<td>方法</td>
+<td>GET</td>
+<td></td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Bearer Token</td>
+<td>用户登录返回token</td>
+</tr>
+<tr>
+<td>请求</td>
+<td>分页数据</td>
+<td>参看下图</td>
+</tr>
+<tr>
+<td>响应</td>
+<td>JSON</td>
+<td>参看下图</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>postman操作</strong></p>
+<p><img alt="framework" src="../../img/get-all-device.png" /></p>
+</li>
+</ul>
               
             </div>
           </div>
