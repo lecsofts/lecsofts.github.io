@@ -5,7 +5,10 @@ nav:
       - 架构图示: plat/plat-framework.md
       - 用户管理: plat/plat-user.md 
       - 设备管理: plat/plat-device.md
-      - 实时数据: plat/plat-realtime.md  
+      - 数据服务: plat/plat-datasource.md
+      - 实时数据: plat/plat-realtime.md 
+      - 在线运维: plat/plat-maintenance.md
+      
   - 关于: 
       - 更新日志: about/log.md
 theme: readthedocs
