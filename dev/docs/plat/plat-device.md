@@ -140,6 +140,7 @@
 
   
   base64-portName是端口名字的base64编码,如下图中L2Rldi90dHlTMQ==
+  
 - **postman操作**
   
     ![framework](../img/delete-device-port.png)
@@ -214,6 +215,7 @@
 
 
   base64-propName是属性名字的base64编码，如下图中的dGVzdHByb3A=
+  
 - **postman操作**
   
     ![framework](../img/delete-device-extprop.png)
