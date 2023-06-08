@@ -117,8 +117,8 @@
     | 接口   | /api/devices/{deviceId}/ports |                   |
     | 方法   | DELETE                        |                   |
     | Token  | Bearer Token                  | 用户登录返回token |
-    | 请求   | 分页数据                      | 参看下图          |
-    | 响应   | JSON                          | 参看下图          |
+    | 请求   |                       |           |
+    | 响应   |                           |           |
 
   
 - **postman操作**
@@ -135,8 +135,8 @@
     | 接口   | /api/devices/{deviceId}/ports/{base64-portName} |                   |
     | 方法   | DELETE                                         |                   |
     | Token  | Bearer Token                                   | 用户登录返回token |
-    | 请求   | 分页数据                                       | 参看下图          |
-    | 响应   | JSON                                           | 参看下图          |
+    | 请求   |                                        |           |
+    | 响应   |                                            |           |
 
   
   base64-portName是端口名字的base64编码,如下图中L2Rldi90dHlTMQ==
@@ -154,7 +154,7 @@
     | 接口   | /api/devices/{deviceId}/ports |                   |
     | 方法   | POST                          |                   |
     | Token  | Bearer Token                  | 用户登录返回token |
-    | 请求   | 分页数据                      | 参看下图          |
+    | 请求   |                       |           |
     | 响应   | JSON                          | 参看下图          |
 
   
@@ -190,7 +190,7 @@
     | 接口   | /api/devices/{deviceId}/ports |                   |
     | 方法   | POST                          |                   |
     | Token  | Bearer Token                  | 用户登录返回token |
-    | 请求   | 分页数据                      | 参看下图          |
+    | 请求   |                       |           |
     | 响应   | JSON                          | 参看下图          |
 
   
@@ -209,11 +209,29 @@
     | 接口   | /api/devices/{deviceId}/ports/{base64-propName} |                   |
     | 方法   | DELETE                                         |                   |
     | Token  | Bearer Token                                   | 用户登录返回token |
-    | 请求   | 分页数据                                       | 参看下图          |
-    | 响应   | JSON                                           | 参看下图          |
+    | 请求   |                                        |           |
+    | 响应   |                                            |           |
 
 
   base64-propName是属性名字的base64编码，如下图中的dGVzdHByb3A=
 - **postman操作**
   
     ![framework](../img/delete-device-extprop.png)
+
+## 删除设备所有扩展属性
+
+- **参数列表**
+
+    | 项目   | 内容                          | 描述              |
+    |--------|-------------------------------|-------------------|
+    | 服务器 | iot.lecsofts.com:8000         |                   |
+    | 接口   | /api/devices/{deviceId}/props |                   |
+    | 方法   | DELETE                        |                   |
+    | Token  | Bearer Token                  | 用户登录返回token |
+    | 请求   |                       |           |
+    | 响应   |                           |           |
+
+  
+- **postman操作**
+  
+    ![framework](../img/delete-device-allextprops.png)
