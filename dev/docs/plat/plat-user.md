@@ -42,7 +42,7 @@
     | 项目   | 内容                   | 描述              |
     |--------|------------------------|-------------------|
     | 服务器 | iot.lecsofts.com:8000  |                   |
-    | 接口   | /api/organizations/add |                   |
+    | 接口   | /api/organizations |                   |
     | 方法   | POST                   |                   |
     | Token  | Bearer Token           | 用户登录返回token |
     | 请求   | JSON                   | 参看下图          |
@@ -51,7 +51,7 @@
   
 - **postman操作**
   
-    ![framework](../img/addorg.bmp)
+    ![framework](../img/add-org.png)
 
 
 ## 删除组织单位
@@ -61,8 +61,8 @@
     | 项目   | 内容                              | 描述              |
     |--------|-----------------------------------|-------------------|
     | 服务器 | iot.lecsofts.com:8000             |                   |
-    | 接口   | /api/organizations/{orgId}/delete |                   |
-    | 方法   | POST                              |                   |
+    | 接口   | /api/organizations/{orgId} |                   |
+    | 方法   | DELETE                              |                   |
     | Token  | Bearer Token                      | 用户登录返回token |
     | 请求   | 无                                |                   |
     | 响应   | true                              | 参看下图          |
@@ -70,7 +70,7 @@
   
 - **postman操作**
   
-    ![framework](../img/deleteorg.bmp)
+    ![framework](../img/delete-org.png)
 
 ## 更新组织单位
 
@@ -88,7 +88,7 @@
   
 - **postman操作**
   
-    ![framework](../img/updateorg.bmp)
+    ![framework](../img/update-org.png)
 
 ## 查询单个组织单位
 
@@ -133,7 +133,7 @@
     | 项目   | 内容                                 | 描述              |
     |--------|--------------------------------------|-------------------|
     | 服务器 | iot.lecsofts.com:8000                |                   |
-    | 接口   | /api/organizations/{orgId}/users/add |                   |
+    | 接口   | /api/organizations/{orgId}/users |                   |
     | 方法   | POST                                 |                   |
     | Token  | Bearer Token                         | 用户登录返回token |
     | 请求   | JSON                                 | 参看下图          |
@@ -142,7 +142,7 @@
   
 - **postman操作**
   
-    ![framework](../img/adduser.png)
+    ![framework](../img/add-user.png)
 
 ## 删除用户
     禁止用户，物理不删除
@@ -152,8 +152,8 @@
     | 项目   | 内容                                             | 描述              |
     |--------|--------------------------------------------------|-------------------|
     | 服务器 | iot.lecsofts.com:8000                            |                   |
-    | 接口   | /api/organizations/{orgId}/users/{userId}/delete |                   |
-    | 方法   | POST                                             |                   |
+    | 接口   | /api/organizations/{orgId}/users/{userId} |                   |
+    | 方法   | DELETE                                             |                   |
     | Token  | Bearer Token                                     | 用户登录返回token |
     | 请求   | 无                                               | 参看下图          |
     | 响应   | JSON                                             | 参看下图          |

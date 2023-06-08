@@ -5,7 +5,7 @@
     | 项目   | 内容                   | 描述              |
     |--------|------------------------|-------------------|
     | 服务器 | iot.lecsofts.com:8000  |                   |
-    | 接口   | /api/organizations/{orgId}/devices/add |                   |
+    | 接口   | /api/organizations/{orgId}/devices |                   |
     | 方法   | POST                   |                   |
     | Token  | Bearer Token           | 用户登录返回token |
     | 请求   | JSON                   | 参看下图          |
@@ -24,8 +24,8 @@
     | 项目   | 内容                              | 描述              |
     |--------|-----------------------------------|-------------------|
     | 服务器 | iot.lecsofts.com:8000             |                   |
-    | 接口   | /api/organizations/{orgId}/devices/{deviceId}/delete |                   |
-    | 方法   | POST                              |                   |
+    | 接口   | /api/organizations/{orgId}/devices/{deviceId} |                   |
+    | 方法   | DELETE                              |                   |
     | Token  | Bearer Token                      | 用户登录返回token |
     | 请求   | 无                                |                   |
     | 响应   | true                              | 参看下图          |
